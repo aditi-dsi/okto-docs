@@ -8,7 +8,6 @@ import installApk from './installapk.png';
 import videoThumbnail from './videoThumbnail.png';
 import oktoicon from './okto-icon.png';
 
-
 export const assets = {
     oktoLogo,
     OktoDownload,
@@ -19,7 +18,5 @@ export const assets = {
     installApk,
     videoThumbnail,
     oktoicon,
-
-    
 }
 

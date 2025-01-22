@@ -1,0 +1,25 @@
+---
+title: Troubleshooting and FAQs
+description: Common issues and questions about Okto SDK with their solutions.
+---
+
+import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+
+
+## Troubleshoot tips
+If you encounter installation issues:
+
+- Ensure your Node.js version is compatible.
+- Check for any SDK version updates.
+- Clear your package manager's cache and try reinstalling.
+- Join our [Discord community]() for direct support.
+
+## FAQs
+<Accordions>
+  <Accordion title="What should I do if I encounter a '504 gateway timeout' while executing a raw transaction?">
+Verify your transaction payload and ensure all required parameters are included. If the issue persists, contact Okto support on Discord with the trace ID for further investigation.
+  </Accordion>
+  <Accordion title="Why are my token transfers failing on different networks?">
+Make sure that the minimum transaction value is 1 USD. On some chains, your transaction may fail if the value is too low. Verify your transaction payload, ensure required parameters are included, and contact support with the trace ID if needed.
+  </Accordion>
+</Accordions>
