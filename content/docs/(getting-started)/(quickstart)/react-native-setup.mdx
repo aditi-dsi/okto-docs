@@ -1,0 +1,100 @@
+---
+title: React Native Setup
+description: In this section you'll learn the how to initialize a React Native project with Okto SDK including a quick sample implementation.
+---
+## Installation Guide
+Welcome to the first step in integrating Okto SDK into your project! This guide will walk you through the installation process and help you get started quickly.
+
+### Prerequisites
+
+Before installation, ensure your development environment meets these requirements:
+
+- Node.js version 14.x or later (LTS version recommended)
+- npm version 6.x or later (included with Node.js) or yarn version 1.22.x or later
+
+### Installation Steps
+#### 1. Create React Native app
+Run the following commands in your terminal to create a new React Native project:
+
+```bash
+npx @react-native-community/cli@latest init OktoApp
+cd OktoApp
+``` 
+
+#### 2. Install the Okto SDK
+After navigating to your React Native project's root directory and execute one of the following commands:
+
+Using npm:
+```bash
+npm install okto-sdk-react-native
+```
+Using yarn:
+```bash
+yarn install okto-sdk-react-native
+``` 
+
+#### 3. Verify Installation
+Confirm the installation by:
+1. Checking your `package.json` dependencies:
+```js
+{
+  "dependencies": {
+    "okto-sdk-react-native": "^x.x.x"  // Version number will vary
+  }
+}
+```
+
+2. Ensuring no error messages appeared during installation
+
+#### 4. Initialize the project
+Import the SDK in your JavaScript/TypeScript files using either of these methods:
+
+ES6+ syntax (recommended):
+
+```js
+import { OktoProvider } from 'okto-sdk-react-native';
+```
+
+For CommonJS environments:
+
+```js
+const { OktoProvider } = require('okto-sdk-react-native');
+```
+
+#### 5. Sample Usage
+```js
+import { OktoProvider } from 'okto-sdk-react-native';
+
+async function swapTokens() {
+  const swap = await OktoProvider.swap({
+    from: 'ETH',
+    to: 'USDC',
+    amount: 1,
+    chain: 'Ethereum',
+  });
+  console.log(swap.transactionHash);
+}
+swapTokens();
+```
+Run the application with the following command:
+
+```bash
+npx react-native run-ios
+```
+
+## Next Steps
+Now that you've installed the SDK successfully, you can:
+
+1. Create your an integrated wallet experience by following the [Basic Examples](https://docs.okto.tech/docs/react-sdk/example-apps/template-app) guide
+2. Explore Advanced Configuration options for customization.
+3. Test your installation by creating a basic implementation.
+
+## Need Help?
+If you encounter installation issues:
+
+- Check [Troubleshooting and FAQs]() for common issues
+- Join our [Discord community]() for direct support
+
+
+> Tip: Keep your SDK version up to date by regularly checking for updates using npm outdated or yarn outdated.
+

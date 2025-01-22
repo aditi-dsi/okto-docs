@@ -1,0 +1,117 @@
+---
+title: Flutter Setup
+description: In this section you'll learn the how to initialize a Flutter project with Okto SDK including a quick sample implementation.
+---
+## Installation Guide
+Welcome to the first step in integrating Okto SDK into your project! This guide will walk you through the installation process and help you get started quickly.
+
+### Prerequisites
+
+Before starting the installation, ensure you have the following requirements:
+
+- Flutter SDK (2.0.0 or higher) - Install Flutter
+- Dart SDK (2.12.0 or higher) - Included with Flutter installation
+- Development Environment:
+  - Android Studio (recommended) with Flutter and Dart plugins, OR
+  - Visual Studio Code with Flutter and Dart extensions
+- A working Flutter project
+
+To verify the setup, run the following command:
+```bash
+flutter doctor
+```
+All checks should return green. If not, address any issues before proceeding.
+
+
+
+### Installation Steps
+#### 1. Create Flutter App
+Run the following commands in your terminal to create a Flutter app:
+
+```bash
+flutter create PATH_TO_MY_APP
+cd PATH_TO_MY_APP
+``` 
+
+#### 2. Set up Google Cloud Console
+1. Go to the [Google Cloud Console](https://console.cloud.google.com/welcome?pli=1&project=gen-lang-client-0123862013).
+2. Follow our [Google Authentication Setup Guide](https://console.cloud.google.com/welcome?pli=1&project=gen-lang-client-0123862013) to create a new project and obtain the necessary credentials.
+Choose one of the following commands based on your package manager:
+
+#### 3. Add Dependencies
+Add the Okto SDK to your project's dependencies in the pubspec.yaml file:
+
+```yaml
+dependencies:  
+	flutter:    
+  	sdk: flutter  
+ 
+  google_sign_in: ^6.2.1  
+  flutter_dotenv: ^5.1.0  
+  okto_flutter_sdk: ^0.0.15  
+  cupertino_icons: ^1.0.6
+```
+
+#### 4. Install Dependencies
+Execute the following command in your project's root directory:
+
+```bash
+flutter pub get
+```
+
+#### 5. Verify Installation
+To confirm successful installation:
+
+1. Check your `pubspec.lock` file for the `okto_flutter_sdk` entry
+2. Verify the version matches your specified version
+3. Ensure no error messages appeared during installation
+
+#### 6. Import the SDK
+
+```dart
+import 'package:okto_sdk/okto_sdk.dart';
+
+void main() {
+  final okto = Okto(apiKey: 'YOUR_API_KEY');
+}
+```
+
+#### 7. Sample Usage
+```dart
+import 'package:okto_sdk/okto_sdk.dart';
+
+void main() {
+  final okto = Okto(apiKey: 'YOUR_API_KEY');
+}
+
+void swapTokens() async {
+  final swap = await okto.swap(
+    from: 'ETH',
+    to: 'USDC',
+    amount: 1,
+    chain: 'Ethereum',
+  );
+  print(swap.transactionHash);
+}
+```
+
+Run the project with following command:
+```bash
+flutter run
+```
+
+## Next Steps
+Now that you've installed the SDK, you can:
+
+1. Explore the [Flutter Example](https://github.com/okto-hq/okto-sdk-flutter-template-app) for implementation samples
+2. Configure advanced settings through our Advanced Configuration guide
+3. Follow our Best Practices for optimal integration
+
+## Need Help?
+If you encounter installation issues:
+
+- Check [Troubleshooting and FAQs]() for common issues
+- Join our [Discord community]() for direct support
+
+> Note: Keep your SDK version updated for the latest features and security improvements.
+

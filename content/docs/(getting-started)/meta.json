@@ -1,5 +1,5 @@
 {
-    "title": "Basics",
+    "title": "Getting Started",
     "icon": "MyIcon",
-    "pages": ["HelloWorld", "components", "index"]
-  }
+    "pages": ["index", "(quickstart)"]
+}

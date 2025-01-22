@@ -1,0 +1,105 @@
+---
+title: React Setup
+description: In this section you'll learn the how to initialize a React project with Okto SDK including a quick sample implementation.
+---
+## Installation Guide
+Welcome to the first step in integrating Okto SDK into your project! This guide will walk you through the installation process and help you get started quickly.
+
+### Prerequisites
+
+Before installation, ensure your development environment meets these requirements:
+
+- Node.js version 14.x or later (LTS version recommended)
+- npm version 6.x or later (included with Node.js) or yarn version 1.22.x or later
+- A project directory initialized with package.json
+
+To verify your installations:
+
+```bash
+node --version
+npm --version
+```
+
+### Installation Steps
+#### 1. Create React app
+Run the following commands in your terminal to create a new React app:
+
+```bash
+npx create-react-app my-okto-app
+cd my-okto-app
+``` 
+
+#### 2. Install the Okto SDK
+Choose one of the following commands based on your package manager:
+
+Using npm:
+```bash
+npm install okto-sdk-react
+```
+Using yarn:
+```bash
+yarn install okto-sdk-react
+``` 
+#### 3. Verify Installation
+Confirm the installation by:
+1. Checking your `package.json` dependencies:
+```js
+{
+  "dependencies": {
+    "okto-sdk-react": "^x.x.x"  // Version number will vary
+  }
+}
+```
+
+2. Ensuring the SDK files are in your `node_modules` directory
+
+
+#### 4. Initialize the project
+Import the SDK into your application using either ES modules or CommonJS syntax:
+
+```js
+import { OktoProvider } from 'okto-sdk-react';
+```
+
+For CommonJS environments:
+
+```js
+const { OktoProvider } = require('okto-sdk-react');
+```
+#### 5. Sample Usage
+```js
+import { OktoProvider } from 'okto-sdk-react';
+
+async function swapTokens() {
+  const swap = await OktoProvider.swap({
+    from: 'ETH',
+    to: 'USDC',
+    amount: 1,
+    chain: 'Ethereum',
+  });
+  console.log(swap.transactionHash);
+}
+swapTokens();
+```
+## Next Steps
+Now that you've installed the SDK successfully, you can:
+
+1. Create your an integrated wallet experience by following the [Basic Examples](https://docs.okto.tech/docs/react-sdk/example-apps/template-app) guide
+2. Explore Advanced Configuration options for customization.
+3. Test your installation by creating a basic implementation.
+
+## Need Help?
+If you encounter installation issues:
+
+- Ensure your Node.js version is compatible
+- Clear your package manager's cache and try reinstalling
+- Check [Troubleshooting and FAQs]() for common issues
+- Join our [Discord community]() for direct support
+
+## Additional Resources
+- [API Documentation]()
+- [Example Projects]()
+- [Best Practices Guide]()
+
+Have fun coding with Okto!
+
