@@ -1,26 +1,36 @@
-# fumadocs
+# Welcome to Okto SDK Documentation (Demo)
+This project is developed as part of a task, to create demonstrable documentation for Okto using the Fumadocs framework.
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+## Key features of the Documentation
+- Overview of the Okto Layer with illustration.
+- Demo support for React, Flutter and React Native SDKs.
+- Code snippets to get you started in no time.
+- Resources to do troubleshooting or advance customization.
+- Available in both Light and Dark mode.
 
-Run development server:
+### A Glimpse to the website
+![website homepage](./home.png)
+![documentation site homepage](./docs.png)
 
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
+## Run the Project Locally
+Clone the repository
+```shell
+git clone https://github.com/aditi-dsi/okto-docs.git
 ```
+Go to the project directory
+```shell
+cd okto-docs
+```
+Install the dependencies
+```shell
+npm install
+```
+Start the server
+```shell
+npm run dev
+```
+The local project will be up and running on https://localhost:3000.
 
-Open http://localhost:3000 with your browser to see the result.
+<br>
 
-## Learn More
-
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.vercel.app) - learn about Fumadocs
+The code for the main website homepage can be found here https://github.com/aditi-dsi/okto-tech.
